@@ -1,0 +1,2 @@
+C:\AndroidClass-share\ATC Lab Source code\ATC_Lab_3\app\build\intermediates\classes\debug
+C:\AndroidClass-share\ATC Lab Source code\ATC_Lab_3\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-f08885162777056608192d094ce2e4250b2e9877.jar
