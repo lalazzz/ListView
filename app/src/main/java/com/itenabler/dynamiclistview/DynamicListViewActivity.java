@@ -68,25 +68,28 @@ public class DynamicListViewActivity extends Activity {
 
 		// Delete item on the long click on the item
 		dynamicListView.setOnItemLongClickListener(new OnItemLongClickListener() {
-					// Right click for mobile is the long click in the device
-					@Override
-					public boolean onItemLongClick(AdapterView<?> arg0,
-							View arg1, int position, long arg3) {
-						// Remove the item from list
-						list.remove(position);
-						// Apply changes on the adapter to refresh the listView
-						adapter.notifyDataSetChanged();
-						return true;
-					}
-				});
+            // Right click for mobile is the long click in the device
+            @Override
+            public boolean onItemLongClick(AdapterView<?> arg0,
+                                           View arg1, int position, long arg3) {
+                // Remove the item from list
+                list.remove(position);
+                // Apply changes on the adapter to refresh the listView
+                adapter.notifyDataSetChanged();
+                return true;
+            }
+        });
 
 
 		//Creating one click simulatiion to see the toast message.
 		dynamicListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				Toast.makeText(DynamicListViewActivity.this, "This is the position you click on the list : " + list.indexOf(position),Toast.LENGTH_SHORT).show();
-			}
+                //Toast.makeText(DynamicListViewActivity.this, "This is the position you click on the list : " + list.indexOf(position),Toast.LENGTH_SHORT).show();
+                Toast.makeText(DynamicListViewActivity.this, "This is the position you click on the list : " + list.get(position), Toast.LENGTH_SHORT).show();
+
+                //Another lesson for setitemclickListener.
+            }
 		});
 
 	}
